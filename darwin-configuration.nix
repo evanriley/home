@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 
 with pkgs; {
-  imports = [ <home-manager/nix-darwin> ./modules ];
+  imports = [ ./cachix.nix <home-manager/nix-darwin> ./modules ];
 
   nixpkgs = {
     config = {
@@ -10,8 +10,7 @@ with pkgs; {
       allowUnsupportedSystem = true;
     };
   };
-  environment.systemPackages =
-    [ pkgs.vim bat ];
+  environment.systemPackages = [ pkgs.vim bat ];
 
   environment.darwinConfig = "$HOME/.nixpkgs/home/darwin-configuration.nix";
 
@@ -29,7 +28,6 @@ with pkgs; {
 
     zsh.enable = true;
   };
-
 
   services = {
     emacs.enable = false;

@@ -10,19 +10,28 @@
         serverless
         stylelint
         js-beautify
+        typescript
       ];
 
     in [
       autoconf
+      asdf
       cachix
       ccls
       cmake
       gcc
       coreutils-prefixed
+      ruby
+      rbenv
       elixir
       erlang
+      go
+      gocode
+      gomodifytags
+      gotests
+      gore
+      go-tools
       clojure
-      ruby
       sass
       R
       nim
