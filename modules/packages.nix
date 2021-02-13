@@ -26,6 +26,7 @@
       elixir
       erlang
       go
+      lorri
       gocode
       gomodifytags
       gotests
@@ -35,6 +36,7 @@
       sass
       R
       nim
+      niv
       nixfmt
       shellcheck
       black

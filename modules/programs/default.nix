@@ -3,6 +3,7 @@
 {
   imports = [
     ./asdf.nix
+    ./direnv
     ./fonts.nix
     ./emacs
     ./git.nix

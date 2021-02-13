@@ -10,7 +10,7 @@ with pkgs; {
       allowUnsupportedSystem = true;
     };
   };
-  environment.systemPackages = [ pkgs.vim bat ];
+  environment.systemPackages = [ pkgs.vim bat direnv ];
 
   environment.darwinConfig = "$HOME/.nixpkgs/home/darwin-configuration.nix";
 
@@ -33,6 +33,7 @@ with pkgs; {
     emacs.enable = false;
     nix-daemon.enable = true;
     postgresql.enable = true;
+    lorri.enable = true;
 
   };
 

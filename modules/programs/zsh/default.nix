@@ -12,6 +12,7 @@
       export SAVEHIST=1000
 
       eval "$(starship init zsh)"
+      eval "$(direnv hook zsh)"
     '';
     envExtra = ''
       export PATH="/opt/homebrew/bin:$PATH"
