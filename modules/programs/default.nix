@@ -8,6 +8,7 @@
     ./emacs
     ./git.nix
     ./prettier
+    ./python
     ./nodejs.nix
     ./ruby.nix
     ./rust
@@ -22,6 +23,11 @@
     nodejs = {
       enable = true;
       yarn.enable = true;
+    };
+    python = {
+      enable = true;
+      extraPackages = with pkgs.python3Packages; [ codecov grip jedi poetry ];
+      pipx.enable = true;
     };
     ruby = {
       enable = true;

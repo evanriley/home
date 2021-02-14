@@ -32,7 +32,6 @@ with pkgs; {
   services = {
     emacs.enable = false;
     nix-daemon.enable = true;
-    postgresql.enable = true;
     lorri.enable = true;
 
   };

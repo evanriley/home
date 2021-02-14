@@ -11,6 +11,7 @@
         stylelint
         js-beautify
         typescript
+        live-server
       ];
 
     in [
@@ -21,6 +22,8 @@
       cmake
       gcc
       coreutils-prefixed
+      fzf
+      wget
       ruby
       rbenv
       elixir
@@ -40,12 +43,6 @@
       nixfmt
       shellcheck
       black
-      python39
-      pipenv
-      python39Packages.pyflakes
-      python39Packages.isort
-      python39Packages.nose
-      python39Packages.pytest
       pandoc
       ripgrep
       fd
