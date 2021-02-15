@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 
 with pkgs; {
-  imports = [ ./cachix.nix <home-manager/nix-darwin> ./modules ];
+  imports = [ <home-manager/nix-darwin> ./modules ];
 
   nixpkgs = {
     config = {

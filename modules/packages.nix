@@ -24,8 +24,6 @@
       coreutils-prefixed
       fzf
       wget
-      ruby
-      rbenv
       elixir
       erlang
       go
@@ -47,6 +45,7 @@
       ripgrep
       fd
       protobuf
+      bundix
       jq
       exa
       lsd
@@ -57,6 +56,8 @@
       gitAndTools.git-hub
       gitAndTools.gh
       starship
+      postgresql
+      sqlite
 
       fontconfig
       aspell

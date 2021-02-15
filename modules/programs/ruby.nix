@@ -4,15 +4,10 @@ with lib;
 
 let
   cfg = config.programs.ruby;
-  ruby = pkgs.ruby_2_6;
-  rubyPackages = pkgs.rubyPackages_2_6;
+  ruby = pkgs.ruby_2_7;
+  rubyPackages = pkgs.rubyPackages_2_7;
   rubyVersion = ruby.version.majMinTiny;
-  rbenv = pkgs.fetchFromGitHub {
-    owner = "rbenv";
-    repo = "rbenv";
-    rev = "c46a970595036718f1b6d3ed8f38833820df709e";
-    sha256 = "05ghzwawzlwwkql091fhxmznd7wi52arpkxp106h2ngfgk592hbi";
-  };
+  rbenv = pkgs.rbenv;
 in {
   options.programs.ruby = {
     enable = mkEnableOption "Ruby language support";

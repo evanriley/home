@@ -1,18 +1,14 @@
 { pkgs, ... }:
 
 {
-  home.packages = with pkgs; [ zsh-completions ];
-
   programs.zsh = {
     enable = true;
-    enableCompletion = true;
     autocd = true;
     initExtra = ''
       export HISTSIZE=1000
       export SAVEHIST=1000
+      RPROMPT=" "
 
-      eval "$(starship init zsh)"
-      eval "$(direnv hook zsh)"
     '';
     envExtra = ''
       export PATH="/opt/homebrew/bin:$PATH"
@@ -30,6 +26,7 @@
       l = "gls -lAh --color";
       ll = "gls -l --color";
       la = "gls -A --color";
+      cat = "bat";
 
       # vi
       vi = "nvim";
@@ -55,6 +52,15 @@
         "open /Applications/Xcode.app/Contents/Developer/Applications/Simulator.app";
       watchos =
         "open /Applications/Xcode.app/Contents/Developer/Applications/Simulator (Watch).app";
+
+      # nix
+      drs = "darwin-rebuild switch";
+
     };
+  };
+
+  programs.starship = {
+    enable = true;
+    enableZshIntegration = true;
   };
 }
