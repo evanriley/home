@@ -9,8 +9,10 @@
       export SAVEHIST=1000
       RPROMPT=" "
 
+
     '';
     envExtra = ''
+      eval "$(starship init zsh)"
       export PATH="/opt/homebrew/bin:$PATH"
       export FZF_DEFAULT_COMMAND='rg --files --hidden --follow -g "!{.git,node_modules,target,.clj-kondo,.lsp}/*"'
     '';

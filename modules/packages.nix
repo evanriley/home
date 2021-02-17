@@ -6,6 +6,7 @@
     let
       myNodePackages = with nodePackages; [
         deno
+        node-gyp
         prettier
         serverless
         stylelint
@@ -20,10 +21,14 @@
       cachix
       ccls
       cmake
+      automake
+      poppler
       gcc
+      pkg-config
       coreutils-prefixed
       fzf
       wget
+      tree
       elixir
       erlang
       go
@@ -34,6 +39,8 @@
       gore
       go-tools
       clojure
+      leiningen
+      clojure-lsp
       sass
       R
       nim
@@ -58,14 +65,15 @@
       starship
       postgresql
       sqlite
-
+      dotnet-sdk_5
+      heroku
       fontconfig
       aspell
-
       spotifyd
       spotify-tui
       youtube-dl
       mpv
+      vscode
 
     ] ++ myNodePackages;
 

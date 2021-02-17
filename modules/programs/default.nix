@@ -5,6 +5,7 @@
     ./asdf.nix
     ./direnv
     ./fonts.nix
+    ./elixir
     ./emacs
     ./git.nix
     ./prettier
