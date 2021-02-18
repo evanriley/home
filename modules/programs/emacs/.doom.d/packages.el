@@ -55,3 +55,4 @@
 (package! seoul256-theme)
 (package! org-roam-server)
 (package! srcery-theme)
+(package! ayu-theme)

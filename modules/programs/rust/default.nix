@@ -6,6 +6,7 @@
     cargo-audit
     cargo-deb
     cargo-deps
+    cargo-edit
     cargo-expand
     cargo-flamegraph
     cargo-graph

@@ -12,13 +12,15 @@
 (add-hook! 'org-mode-hook (company-mode -1))
 (add-hook! 'org-capture-mode-hook (company-mode -1))
 
+
 (setq
  doom-font (font-spec :family "JetBrains Mono" :size 16)
  doom-big-font (font-spec :family "JetBrains Mono" :size 36)
  doom-variable-pitch-font (font-spec :fammily "Overpass" :size 16)
  doom-serif-font (font-spec :family "IBM Plex Mono" :weight 'light)
- doom-theme 'doom-spacegrey
+ ;;doom-theme 'doom-spacegrey
  ;;doom-theme 'doom-nord
+ doom-theme 'doom-wilmersdorf
  web-mode-markup-indent-offset 2
  web-mode-code-indent-offset 2
  web-mode-css-indent-offset 2
