@@ -73,7 +73,6 @@
       spotify-tui
       youtube-dl
       mpv
-      vscode
 
     ] ++ myNodePackages;
 
