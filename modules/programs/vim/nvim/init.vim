@@ -264,7 +264,7 @@ Plug 'Shougo/neosnippet-snippets'   " Snippets repository
 Plug 'Shougo/echodoc.vim'
 
 " Neuron
-Plug 'ihsanturk/neuron.vim'         " Note taking
+Plug 'chiefnoah/neuron-v2.vim'         " Note taking
 
 " Other tools
 Plug 'bogado/file-line'                 " Open a file on arbitrary line: filename:line
@@ -396,16 +396,6 @@ vmap <leader>C <Plug>(sad-change-backward)
 
 " FZF/Ripgrep Stuff
 " ===================================
-" --column: Show column number
-" --line-number: Show line number
-" --no-heading: Do not show file headings in results
-" --fixed-strings: Search term as a literal string
-" --ignore-case: Case insensitive search
-" --no-ignore: Do not respect .gitignore, etc...
-" --hidden: Search hidden files and folders
-" --follow: Follow symlinks
-" --glob: Additional conditions for search (in this case ignore everything in the .git/ folder)
-" --color: Search color options
 nnoremap <C-p> :FZF<CR>
 
 
@@ -676,10 +666,9 @@ let g:coc_global_extensions = ['coc-tsserver', 'coc-rust-analyzer', 'coc-eslint'
 
 
 " Vim-floaterm settings
-let g:floaterm_keymap_new    = '<Leader>t'
+let g:floaterm_keymap_toggle    = '<Leader>t'
 let g:floaterm_keymap_prev   = '<Leader><'
 let g:floaterm_keymap_next   = '<Leader>>'
-let g:floaterm_keymap_toggle = '<Leader>T'
 
 
 

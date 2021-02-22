@@ -1,21 +1,12 @@
-{ pkgs, ... }:
+{ config, lib, pkgs, ... }:
 
 {
-  programs.zsh = {
+  programs.fish = {
     enable = true;
-    autocd = true;
-    initExtra = ''
-      export HISTSIZE=1000
-      export SAVEHIST=1000
-      RPROMPT=" "
-
-
+    shellInit = ''
+      set -U fish_user_paths /opt/homebrew/bin $fish_user_paths
     '';
-    envExtra = ''
-      eval "$(starship init zsh)"
-      export PATH="/opt/homebrew/bin:$PATH"
-      export FZF_DEFAULT_COMMAND='rg --files --hidden --follow -g "!{.git,node_modules,target,.clj-kondo,.lsp}/*"'
-    '';
+
     shellAliases = {
       # utils
       grep = "grep --color=auto";
@@ -24,10 +15,10 @@
       mkdir = "mkdir -pv";
       myip = "curl http://ipecho.net/plain; echo";
       pubkey = "pbcopy < ~/.ssh/id_rsa.pub'";
-      ls = "exa";
-      l = "exa -l";
-      ll = "exa -l | less";
-      la = "exa -la";
+      ls = "gls -F --color";
+      l = "gls -lAh --color";
+      ll = "gls -l --color";
+      la = "gls -A --color";
       cat = "bat";
 
       # vi
@@ -60,14 +51,13 @@
 
     };
   };
-
   programs.starship = {
     enable = true;
-    enableZshIntegration = true;
+    enableFishIntegration = true;
   };
 
   programs.zoxide = {
     enable = true;
-    enableZshIntegration = true;
+    enableFishIntegration = true;
   };
 }

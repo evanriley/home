@@ -28,8 +28,6 @@ in {
 
   home-manager = {
     useUserPackages = false;
-    users.evan = { pkgs, ... }: {
-      imports = [ ./packages.nix ./programs ];
-    };
+    users.evan = { pkgs, ... }: { imports = [ ./packages.nix ./programs ]; };
   };
 }

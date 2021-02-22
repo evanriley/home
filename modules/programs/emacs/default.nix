@@ -4,9 +4,10 @@ with lib;
 let
   cfg = config.programs.emacs;
   withPatches = pkg: patches: pkg.overrideAttrs (attrs: { inherit patches; });
-  patches = path: with builtins;
-    (map (n: path + ("/" + n)) (filter (n: match ".*\\.patch" n != null)
-      (attrNames (readDir path))));
+  patches = path:
+    with builtins;
+    (map (n: path + ("/" + n))
+      (filter (n: match ".*\\.patch" n != null) (attrNames (readDir path))));
 
   emacs = withPatches pkgs.emacs (patches ./patches/emacs27);
   emacsGit = withPatches pkgs.emacsGit (patches ./patches/emacs28);

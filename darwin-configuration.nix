@@ -1,7 +1,11 @@
 { config, pkgs, ... }:
 
 with pkgs; {
-  imports = [ <home-manager/nix-darwin> ./modules ];
+  imports = [
+    <home-manager/nix-darwin>
+    ./modules
+    #  ./services
+  ];
 
   nixpkgs = {
     config = {
@@ -9,6 +13,14 @@ with pkgs; {
       allowBroken = false;
       allowUnsupportedSystem = true;
     };
+
+    # overlays = let path = ./overlays;
+    # in with builtins;
+    # map (n: import (path + ("/" + n))) (filter (n:
+    #   match ".*\\.nix" n != null
+    #   || pathExists (path + ("/" + n + "/default.nix")))
+    #   (attrNames (readDir path)));
+
   };
   environment.systemPackages = [ pkgs.vim bat direnv ];
 
